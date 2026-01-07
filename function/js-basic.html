@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript practice</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin-left: 30%;
+        margin-top: 5%;
+    }
+
+    .main-container {
+        height: 500px;
+        width: 500px;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+    .container {
+        height: 70%;
+        width: 60%;
+        background-color: gray;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 20px;
+        flex-direction: column;
+
+    }
+
+    .display-area {
+        height: 30%;
+        width: 80%;
+        background-color: lightgrey;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+        
+    }
+
+    button {
+        height:40%;
+        width: 100%;
+        background-color:orangered;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    input{
+        height: 30%;
+        width: 95%;
+        background-color: lightskyblue;
+        border-radius: 10px;
+    }
+    .click-button:hover{
+        background-color:rgba(255, 119, 0, 0.91) ;
+    }
+</style>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <p id="display"></p>
+            <div class="display-area">
+                <input type="text" class="input-field" id="input-one" placeholder="Enter your input...."> <br>
+                <button class="click-button" onclick="displayOutput()">click</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script>
+    function displayOutput() {
+        //input 
+        let x = document.getElementById("input-one").value;
+        //process
+        let y = x * 8;
+        //output
+        document.getElementById("display").innerHTML = y;
+    }
+</script>
+
+</html>

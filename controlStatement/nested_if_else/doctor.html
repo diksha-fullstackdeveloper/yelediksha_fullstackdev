@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Doctor is present</label>
+    <br>
+    <input type="radio" name="check" value="in" id="doctor-in"><label>In</label>
+     <input type="radio" name="check" value="out" id="doctor-out"><label>Out</label>
+     <br>
+     <label>Patient registration</label>
+     <br>
+     <input type="radio" name="ragister" value="in" id="patient-in"><label>In</label>
+     <input type="radio" name="ragister" value="out" id="patient-out"><label>Out</label>
+     <br><label>Patient registration</label>
+     <br>
+     <label>Payment is Done?</label>
+     <input type="radio" name="payment" value="pass" id="payment-done"><label>In</label>
+     <input type="radio" name="payment" value="fail" id="do-not-done"><label>Out</label>
+     <br>
+     <button onclick="appoinment()">Submit</button>
+    <script>
+       function appoinment(){
+        let doctor = ""
+        if(document.getElementById("doctor-in").checked){
+            doctor = "in"
+        }
+        else if(document.getElementById("doctor-out").checked){
+            doctor = "out"
+        }
+        if(document.getElementById("patient-in").checked){
+            doctor = "patient-in"
+        }
+        else if(document.getElementById("patient-out").checked){
+            doctor = "patient-out"
+        }
+        if(document.getElementById("payment-done").checked){
+            doctor = "payment-done"
+        }
+        else if(document.getElementById("do-not-done").checked){
+            doctor = "do-not-done"
+        }
+       
+       }
+    </script>
+</body>
+</html>

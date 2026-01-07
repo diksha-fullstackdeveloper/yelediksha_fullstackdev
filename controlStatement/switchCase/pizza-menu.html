@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza menu</title>
+</head>
+
+<body>
+    <!-- <button onclick="getPizza()">submit</button> -->
+    <button id="smallPizza" onclick="smallPizza()">small pizza $150</button>
+    <br><br>
+    <button id="midiumPizza" onclick="midiumPizza()">midium pizza $250</button>
+    <br><br>
+    <button id="largePizza" onclick="largePizza()">large pizza $350</button>
+    <br><br>
+    <p id="display"></p>
+
+    <script>
+        let pizzaPrice = 0;
+        let select = ""
+        function getPizza() {
+
+            switch (pizzaPrice) {
+                case 150:
+                    select="you select small pizza!";
+                    break;
+
+                case 250:
+                    select = "you select midium pizza!";
+                    break;
+
+                    default:
+                        select = "you select large pizza!"
+            }
+            document.getElementById("display").innerHTML = select;
+        }
+        function smallPizza() {
+            pizzaPrice = 150;
+            getPizza();
+        }
+        function midiumPizza() {
+            pizzaPrice = 250;
+            getPizza()
+        }
+        function largePizza() {
+            pizzaPrice = 350;
+            getPizza()
+        }
+
+
+    </script>
+</body>
+
+</html>

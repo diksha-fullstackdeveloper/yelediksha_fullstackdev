@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questin-one</title>
+</head>
+<body>
+    <h1>Area of square</h1>
+    <br>
+    <input type="number" id="square1" placeholder="entr the side of square...">
+   
+    <br>
+    <br>
+    <button onclick="functionarea()">calculate</button>
+    <p id="result"></p>
+</body>
+<script>
+    function functionArea(){
+        //input
+        let a = Number(document.getElementById("square1").value);
+
+        //process
+        let square = a*a;
+        
+        //output
+        console.log(square);
+        document.getElementById("result").innerHTML = "the area of square is:" + square;
+
+
+
+    }
+</script>
+</html>

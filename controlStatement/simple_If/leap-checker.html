@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* declaration */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* tag selectors */
+        .container {
+            height: 40vh;
+            width: 30vw;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            height: 10%;
+            width: 80%;
+            background-color: white;
+            border-style: dotted;
+
+        }
+
+        button {
+            height: 15%;
+            width: 80%;
+            background-color: rgb(60, 166, 193);
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .display {
+            height: 10%;
+            width: 80%;
+            background-color: white;
+            border-style: dotted;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        p {
+            font-size: 24px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap year checker</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Leap year Checker</h1>
+        <input type="number" id="input">
+        <button onclick="checkYear()">Leap checker</button>
+        <div class="display">
+            <p id="result"></p>
+        </div>
+    </div>
+    <script>
+        function checkYear() {
+            let year = document.getElementById("input").value;
+            if (year % 4 == 0 && year % 100 != 0 || (year % 400 == 0)) {
+            document.getElementById("result").innerHTML = "is leap year"
+            }
+            else {
+            document.getElementById("result").innerHTML = "is not leap year"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

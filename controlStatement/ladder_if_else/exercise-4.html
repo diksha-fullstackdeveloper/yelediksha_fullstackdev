@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- style apply -->
+     <style>
+        /* declaration */
+        body{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* tag selectors */
+        .container{
+            height: 60vh;
+            width: 40vw;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .input-group{
+            height: 25%;
+            width: 90%;
+            background-color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px;
+            gap: 10px;
+         }
+         input{
+            height: 30%;
+            width: 90%;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 24px;
+         }
+         label{
+            font-size: 24px;
+         }
+         button{
+            height: 10%;
+            width: 90%;
+            background-color: rgb(42, 202, 69);
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+         }
+         .display{
+            height: 15%;
+            width: 90%;
+            background-color: rgb(222, 187, 121);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 29px;
+            
+
+         }
+
+     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tempreture checker</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tempreture Range Checker</h1>
+        <div class="input-group">
+            <label>Enter Tempreture ( C )</label>
+            <input type="text" id="input">
+        </div>
+         <div class="display" id="display"></div>
+        <button onclick="showTemp()">check tempreture</button>
+    </div>
+
+    <script>
+        function showTemp() {
+            let temp = document.getElementById("input").value;
+            bgcolor = ""
+            display = ""
+            fontcolor = ""
+
+            if (temp >= 40) {
+                display = "very hot"
+                bgcolor = "orange"
+                fontcolor = "rgb(231, 169, 52"
+            }
+            else if (temp >= 30) {
+                display = "hot"
+            }
+            else if (temp >= 20) {
+                display = "warm"
+            }
+            else if (temp >= 10) {
+                display = "cool"
+            }
+            else if (temp >= 0) {
+                display = "cold"
+            }
+            else {
+                display = "freezing"
+            }
+            document.getElementById("input").value = "";
+            document.getElementById("display").innerHTML = display;
+            document.getElementById("display-box").style.backgroundColor = bgcolor;
+            document.getElementById("display").style.color = fontcolor;
+        }
+    </script>
+</body>
+
+</html>

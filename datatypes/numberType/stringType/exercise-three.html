@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* declaration  */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
+        }
+
+        /* tag selectors */
+        .container {
+            height: 50vh;
+            width: 50vw;
+            background-color: aqua;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        button {
+            height: 15%;
+            width: 60%;
+            background-color: rgba(203, 190, 190, 0.671);
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px gray;
+            font-size: 20px;
+
+        }
+
+        .button-one {
+            height: 15%;
+            width: 65%;
+            background-color: rgb(134, 184, 58);
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px white;
+            display: none;
+        }
+
+        P {
+            height: 15%;
+            width: 60%;
+            background-color: rgb(219, 229, 238);
+            border-radius: 10px;
+            font-size: 24px;
+            box-shadow: 1px 1px 1px white;
+            color: black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 3</title>
+</head>
+
+<body>
+    <!-- body structure -->
+    <div class="container">
+        <h1>Favorite Programming Language!</h1>
+        <br>
+        <button onclick="askLanguage()">Tell Us Your Favorite Language</button>
+
+        <p id="display"></p>
+        <button class="button-one" id="output">Your Favorite Language Is:JS</button>
+    </div>
+</body>
+<script>
+    // script tag
+    function askLanguage() {
+        //input 
+        let language = prompt("enter your fav. language");
+        //output
+        document.getElementById("display").innerHTML = "your favorite language is:" + language;
+        alert(typeof (language));
+    }
+</script>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- apply style -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* tag selectors */
+        .container {
+            height: 50vh;
+            width: 40vw;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        input {
+            height: 10%;
+            width: 90%;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        button {
+            height: 10%;
+            width: 90%;
+            background-color: rgb(78, 196, 78);
+            border-radius: 8px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .display {
+            height: 15%;
+            width: 90%;
+            background-color: rgb(135, 167, 135);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font: 20px;
+
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Time-Based Greeting</h1>
+        <label>Enter current hour(0-23):</label>
+        <input type="number" id="input">
+        <button onclick="getGreeting()">Get Greetings</button>
+        <div class="display">
+            <p id="display"></p>
+        </div>
+    </div>
+    <script>
+        function getGreeting() {
+
+
+            let hour = document.getElementById("input").value;
+            switch (true) {
+                case ((hour >= 5) && (hour < 12)):
+                    document.getElementById("display").innerHTML = "good morning";
+                    break;
+
+
+                case ((hour >= 12) && (hour < 17)):
+                    document.getElementById("display").innerHTML = "good afternoon";
+                    break;
+
+
+                case ((hour >= 18) && (hour < 21)):
+                    document.getElementById("display").innerHTML = "good evening";
+                    break;
+
+
+                case ((hour >= 21 && hour <= 24) || (hour >= 8 && hour <= 4)):
+                    document.getElementById("display").innerHTML = "good night";
+                    break;
+
+                default:
+                    document.getElementById("display").innerHTML = "please enter valid number";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

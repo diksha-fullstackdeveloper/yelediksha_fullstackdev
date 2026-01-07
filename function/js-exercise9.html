@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* declaration */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* tag selectors */
+        .main-container {
+            height: 500px;
+            width: 500px;
+            background-color: azure;
+            border-style: solid;
+            border-color: black;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .displayarea {
+            height: 50%;
+            width: 90%;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+
+        .input-area {
+            height: 30%;
+            width: 90%;
+            background-color: aquamarine;
+            gap: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            height: 30%;
+            width: 30%;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            gap: 10px;
+        }
+
+        .clickbutton {
+            height: 10%;
+            width: 60%;
+            background-color: rgb(255, 98, 0);
+            border-radius: 10px;
+        }
+
+        .clickbutton:hover {
+            background-color: rgb(255, 149, 0);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-exercise9</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="displayarea">
+            <h1 id="result"></h1>
+        </div>
+        <div class="input-area">
+            <input type="number" id="number1" placeholder="enter your input....">
+            <input type="number" id="number2" placeholder="enter your input....">
+            <input type="number" id="number3" placeholder="enter your input....">
+            <input type="number" id="number4" placeholder="enter your input....">
+            <input type="number" id="number5" placeholder="enter your input....">
+        </div>
+        <button class="clickbutton" onclick="displayoutput()">click</button>
+    </div>
+
+
+
+    <script>
+        function displayoutput() {
+            let num1 = Number(document.getElementById("number1").value);
+            let num2 = Number(document.getElementById("number2").value);
+            let num3 = Number(document.getElementById("number3").value);
+            let num4 = Number(document.getElementById("number4").value);
+            let num5 = Number(document.getElementById("number5").value);
+
+            let sum = num1 + num2 + num3 + num4 + num5;
+            let avg = sum / 5;
+
+            document.getElementById("result").innerHTML = "the average of = " + avg;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+    <h1>perimeter of square</h1>
+    <br>
+    <input type="number" id="side" >
+    <br>
+    
+    <br>
+    <button onclick="totalsides()">calculate</button>
+    <p id="result"></p>
+</body>
+<script>
+    function totalsides(){
+         //input
+         let side = Number(document.getElementById("side").value);
+
+         //process
+         let perimeter= 4 * side; 
+         //output
+         alert(perimeter);
+         document.getElementById("result").innerHTML = "the perimeter of square is:" + perimeter;
+
+     }
+
+    
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings functions</title>
+</head>
+
+<body>
+    <script>
+        //input a variable
+        let string = prompt("enter a string");
+        console.log("original string :" + string);
+
+        //toUpperCase library function
+        let upperCaseString = string.toUpperCase();
+        console.log("UpperCase String:" + upperCaseString);
+
+        //toLowerCase library function
+        let lowerCaseString = string.toLowerCase();
+        console.log("Lowercase String:" + lowerCaseString);
+
+
+        //convert lower to upper
+        let lowerCaseStrings = upperCaseString.toLowerCase()
+        console.log("LowerCase string:" + lowerCaseString);
+
+
+        // length library function
+        let stringLength = string.length;
+        console.log("length of string :" + stringLength);
+
+        //concat library function
+        let newString = "Good Morning";
+        let concatStrings = newString + "" + string;
+        console.log(concatStrings);
+
+        let concatString = string.concat(newString);
+        console.log(concatString);
+
+        //charAt library function 
+        string = "diksha";
+        let letter = string.charAt(3);
+        console.log(letter);
+    </script>
+</body>
+
+</html>

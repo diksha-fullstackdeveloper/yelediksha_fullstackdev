@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* declaration */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* tag selectors */
+        .container {
+            height: 50vh;
+            width: 50vw;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
+
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input {
+            height: 10%;
+            width: 90%;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        button {
+            height: 10%;
+            width: 90%;
+            background-color: rgb(78, 196, 78);
+            border-radius: 8px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .display {
+            height: 15%;
+            width: 90%;
+            background-color: rgb(135, 167, 135);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font: 20px;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1><b>Login to your account</b></h1>
+        <label>Username</label>
+        <input type="text" id="input-1">
+        <label>Password</label>
+        <input type="text" id="input-2">
+
+        <button onclick="checkNumber()">Log In</button>
+        <div class="display">
+            <p id="display"></p>
+
+        </div>
+
+    </div>
+    <script>
+        function checkNumber() {
+            let username = "username"
+            let password = "1234"
+            let display = ""
+
+            let inputUsername = document.getElementById("input").value;
+            let inputPassword = document.getElementById("input").value;
+
+            //using if else
+            // if (username == "username" || password == "1234") {
+            //     display = "log In successfull"
+            // }
+            // else {
+            //     display = "invalid username or password"
+            // }
+            // alert(display)
+
+
+
+            // using nested if else
+            if (username == inputUsername) {
+                let inputPassword = document.getElementById("input").value;
+                if (password == inputPassword) {
+                    document.getElementById("display").innerHTML = "login successfull";
+                }
+                else {
+                    document.getElementById("display").innerHTML = "password is invalid";
+                }
+            }
+            else {
+                document.getElementById("display").innerHTML = "invalid username ";
+            }
+            document.getElementById("display").innerHTML = display;
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

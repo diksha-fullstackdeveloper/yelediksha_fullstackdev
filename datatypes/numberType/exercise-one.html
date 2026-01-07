@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* declaration */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* tag selectors */
+        .main-container {
+            height: 50vh;
+            width: 50vw;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .container{
+            height: 70%;
+            width: 90%;
+            background-color: aliceblue;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            text-align: start;
+            flex-direction: column;
+        }
+
+        input {
+            height: 20%;
+            width: 70%;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px gray;
+        }
+        button{
+            height: 20%;
+            width: 70%;
+            background-color:rgba(47, 128, 0, 0.744);
+            border-radius: 10px;
+            font-size: 20px;
+            
+            }
+            label{
+                font-size: 20px;
+                
+            }
+            .output{
+                height: 20%;
+                width: 70%;
+                border-radius: 10px;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- body structure -->
+    <div class="main-container">
+        <h1>Sum Calculator</h1>
+        <div class="container">
+            <label>First Number</label>
+
+            <input type="number" id="input-one">
+            <br>
+            <label>Second Number</label>
+            <input type="number" id="input-two">
+            <br>
+            <button onclick="clickbutton()" class="clickbutton">Calculate Sum</button>
+            <p id="output"></p>
+        </div>
+    </div>
+</body>
+<script>
+    function clickbutton() {
+        //input
+        let num1 = document.getElementById("input-one").value;
+        let num2 = document.getElementById("input-two").value;
+        //process
+        let sum = Number(num1) + Number(num2);
+        //output
+        document.getElementById("output").innerHTML = " The sum is:" + sum;
+
+
+
+    }
+</script>
+
+</html>

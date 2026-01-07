@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, i    `1q nitial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="display">String exercise 1</h1>
+    <br>
+    <button onclick="document.getElementById('display').innerHTML='hello';">click</button>
+    <br><br>
+    <input type="text" id="input-one" placeholder="enter the value">
+    <input type="text" id="input-two" placeholder="enter the value">
+    <button onclick="functionOne()">submit</button>
+    <p id="result"></p>
+    <script>
+        let string1 = prompt("enter a string one");
+        let string2 = prompt("enter a string two");
+        let c = string1 + string2;
+        alert(c);
+
+       function functionOne(){
+            let str1 = document.getElementById("input-one").value;
+            let str2 = document.getElementById("input-two").value;
+
+            let concatstr =  str1 + str2;
+
+            document.getElementById("result").innerHTML= concatstr;
+        }
+        
+
+    </script>
+</body>
+</html>

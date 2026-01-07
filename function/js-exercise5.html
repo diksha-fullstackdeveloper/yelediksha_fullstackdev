@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       /* decleration */
+       body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+       }
+       /* tag selectors */
+       .main-container{
+        height: 600px;
+        width: 700px;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+       }
+       .display-area{
+        height: 70%;
+        width: 90%;
+        background-color: aqua;
+        border-radius: 10px;
+        
+       }
+       .input-area{
+        height: 30%;
+        width: 80%;
+        background-color: cadetblue;
+        border-radius: 10px;
+        gap: 20px;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+       }
+       .input{
+        height: 20%;
+        width: 95%;
+        background-color: lightgoldenrodyellow;
+        border-radius:10px ;
+        gap: 10px;
+        margin-left: 10px;
+       }
+       .click-button{
+        height: 20%;
+        width: 80%;
+        border-radius: 10px;
+        background-color: orangered;
+        margin-left: 40px;
+       }
+       .click-button:hover{
+        background-color: orange;
+       }
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-exercise4</title>
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="display-area">
+        <p id="display"></p></div>
+        <div class="input-area">
+            <input type="text" class="input" id="input" placeholder="enter your input...">
+            <input type="text" class="input" id="input2" placeholder="enter your input...">
+            <button class="click-button" onclick="displayoutput()">click</button>
+        </div>
+    </div>
+</body>
+<script>
+    function displayoutput(){
+       let y = Number( document.getElementById("input").value);
+        y = Number(y);
+       document.getElementById("display").innerHTML = "data type of " + y + "is" + typeof y ;
+       let x = Number(document.getElementById("input2").value);
+       x = Number(x);
+       document.getElementById("display").innerHTML = "data type of " + x + "is" + typeof x ;
+    }
+</script>
+</html>

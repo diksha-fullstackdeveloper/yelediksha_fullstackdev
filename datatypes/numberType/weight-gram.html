@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>weight into gram</h1>
+    <br>
+    <input type="number" id="weight" placeholder="enter users weight...">
+    <br>
+    <button onclick="functionOne()">calculate</button>
+    <br>
+    <p id="result"></p>
+</body>
+<script>
+    function functionOne(){
+        //input
+        let weight = Number(document.getElementById("weight").value);
+
+        //process
+        let gram = weight*1000;
+
+        //output
+        console.log(gram);
+        document.getElementById("result").innerHTML = "the weight in gram is =" + gram;
+
+    }
+</script>
+</html>

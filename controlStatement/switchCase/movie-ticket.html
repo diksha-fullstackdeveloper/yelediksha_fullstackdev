@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie ticket pricing</title>
+</head>
+
+<body>
+    <input type="number" id="input">
+    <button onclick="checkAge()">check ticket price</button>
+    <p id="display"></p>
+    <script>
+        selectAge = ""
+        function checkAage() {
+            let age = document.getElementById("input").innerHTML = value;
+            switch (true) {
+                case (0 - 12):
+                    selectAge = "$100";
+                    break;
+
+                case (13 - 19):
+                    selectAge = "$150";
+                    break;
+                case (20 - 59):
+                    selectAge = "$200";
+                    break;
+
+                default:
+                    selectAge = "$120";
+            }
+            document.getElementById("display").innerHTML = selectAge;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+     /*    declaration*/
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* tag selectors */
+        .main-container{
+            height: 70vh;
+            width: 50vw;
+            background-color:white;
+            border-radius:10px ;
+            box-shadow: 1px 1px 3px 0.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input{
+            height: 17%;
+            width: 90%;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            
+        }
+        button{
+            height: 18%;
+            width: 90%;
+            background-color:rgba(27, 132, 148, 0.915);
+            border-radius: 10px;
+            font-size: 24px;
+            color: white;
+        }
+        .p-tag{
+            font-size: 28px;
+            
+        }
+        label{
+            font-size: 24px;
+            color: black;
+            
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmet no. 9</title>
+</head>
+<body>
+    <!-- body structure -->
+    <div class="main-container">
+        <h1>Number Comparison</h1>
+        <label>First number</label>
+        <input type="number" id="input-one" placeholder="enter the first number...">
+        <label>Second number</label>
+        <input type="number" id="input-two" placeholder="enter the second number...">
+        <br>
+        <button onclick="compareFunction()">Compare Numbers (first > second)</button>
+        <p class="p-tag" id="result"></p>
+       
+    </div>
+</body>
+<script>
+    // script
+    function compareFunction(){
+        //assign the values
+        let num1 = Number(document.getElementById("input-one").value);
+        let num2 = Number(document.getElementById("input-two").value);
+        //compare the numbers
+        let compare = num1 > num2;
+        //output
+        document.getElementById("result").innerHTML = compare;
+
+    }
+</script>
+</html>

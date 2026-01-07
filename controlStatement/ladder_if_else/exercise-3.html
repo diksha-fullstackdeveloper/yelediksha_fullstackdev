@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekday exercise</title>
+</head>
+<body>
+    <!-- structure apply -->
+    <input type="number" id="input">
+    <br>
+    <br>
+    <button onclick="getDay()">click</button>
+    <br>
+    <h1 id="result"></h1>
+
+
+    <!-- script apply -->
+    <script>
+        function getDay(){
+           let number = document.getElementById("input").value;
+           result = "" 
+        
+        if(number == 0){
+            result = "sunday"
+        }
+        else if(number == 1){
+            result = "monday"
+        }
+        else if(number == 2){
+            result = "tuesday"
+        }
+        else if(number == 3){
+            result = "wednesday"
+        }
+        else if(number == 4){
+            result = "thursday"
+        }
+        else if(number == 5){
+            result = "friday"
+        }
+        else{
+            result = "sunday"
+        }
+        document.getElementById("result").innerHTML = result;
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* declaration */
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 90px;
+        }
+        /* tag selectors */
+        .message-box{
+            height: 30vh;
+            width: 30vw;
+            background-color:aliceblue ;
+            box-shadow: 1px 1px 1px 1px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+              
+        }
+        button{
+            height: 30%;
+            width: 40%;
+            padding: 10px;
+            background-color:rgb(175, 57, 57);
+            color: white;
+            border-radius: 10px;
+            font-size: 26px;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="message-box">
+    <button onclick="clickbuton()">click</button>
+    <h2 id="display"></h2>
+    </div>
+    
+</body>
+<script>
+    function clickbuton(){
+        let message= "welcome to javascript world !";
+        document.getElementById("display").innerHTML = message ;
+    }
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            height: 500PX;
+            width: 500PX;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+        }
+
+        .container {
+            height: 70%;
+            width: 80%;
+            background-color: azure;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10PX;
+
+        }
+
+        button {
+            cursor: pointer;
+            background-color: burlywood;
+            height: 7%;
+            width: 60%;
+            border-radius: 10px;
+            background-color: orangered;
+        }
+
+        .input-area {
+            height: 60%;
+            width: 60%;
+            background-color: cadetblue;
+            border-radius: 10px;
+        }
+
+        input {
+            height: 7%;
+            width: 45%;
+            background-color: lightcyan;
+            border-radius: 10px;
+
+        }
+        .click-button:hover{
+            background-color: rgb(255, 179, 0);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="input-area">
+            <p id="display">gds</p>
+
+            </div>
+            <button class="click-button" onclick="diksha()">click</button>
+        
+            <input type="text" class="input-field" id="input-field1" placeholder="Enter the value...">
+            <input type="text" class="input-field" id="input-field2" placeholder="Enter the value...">
+        </div>
+    </div>
+    <script>
+        function diksha() {
+            let x = Number(document.getElementById("input-field1").value);
+            let y = Number(document.getElementById("input-field2").value);
+            document.getElementById("display").innerHTML = x * y + typeof y;
+        }
+    </script>
+</body>
+
+</html>

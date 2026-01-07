@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-exercise10</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <input type="number" id="input" placeholder="enter your input">
+    <button onclick="displayoutput()">click</button>
+    <script>
+        function displayoutput(){
+        //input using prompt 
+         let number1 = prompt("enter a number");
+         //input using html
+         let number2 = document.getElementById("input").value; 
+         let c = Number(number1) * Number(number2);
+         //output
+        document.getElementById("result").innerHTML = c ;
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container{
+            height:80%;
+            width: 30%;
+            box-shadow:4px 4px 10px 4px rgba(0, 0, 0, 0.806);
+            background-color:white;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 10px;
+        }
+        .bulb-image{
+            width: 80%;
+            height:70% ;
+
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+        }
+        .button-group{
+            height: 30%;
+            width: 90%;
+            background-color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        button{
+            height: 28%;
+            width: 50%;
+            border-radius: 10px;
+            border: none;
+            font-size: 20px;
+            border-color: gray;
+            border-style: solid;
+            background-color: lightslategray;
+            
+        }
+        .clickbutton{
+            background-color: azure;
+        }
+        .clickbutton:hover{
+            background-color: greenyellow;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="bulb-image">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRk5kHc_5lMPRpS5WB0040BLMglhIuRjqGH7FaNJW8potgYbS3sjFIEAqJkg2BEfLm1Cc2WEP9yeT0yg06GsruzmJ2Es6ija6y8e3BJIK81cmZyQfzZqA_Ivg" alt="" id="image" >
+        </div>
+        <div class="button-group">
+            <button class="clickbutton" onclick="redBulb()">Red bulb</button>
+            <button class="clickbutton" onclick="greenBulb()" >Green bulb</button>
+            <button class="clickbutton" onclick="blueBulb()">Blue blub</button>
+    </div>
+    <script>
+        function redBulb(){
+            document.getElementById("image").src= "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTbkZ2cbcOd7DEcPisKjB-Zu94N8uUnRkKjFWVyHcQvrnL46VWq94wtlTHh7X46gNVuQZWdP_b1K8j53t9QlB3h5L5umPSNt1gsdFmDEtmJOZ-l3Vf2vaIfmPw";
+        }
+        function greenBulb(){
+            document.getElementById("image").src= "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTshoGS1B8sZbO4jb-WHJP_FZo9cW8Z43a2TiYZviIVpx7kZGdOS51X3ntQi9qhviHuSOWXg1OXg81vP83oA2ZjVp_BYN8Og38Xt-3cLOzVysOCE5aJorRgJw";
+        }
+        function blueBulb(){
+            document.getElementById("image").src= "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR0GLz0XLRMcoBNwbKMhnmz9vVfrbwH5DKx90tu4yJwtqNOR8-DXKbs-BdJntTuvOjqZ7OzzEs-8m9Ch6AiEZ3TT7dauSH28OzCOVLmKtFkTAfGkFrEvPBzfA";
+        }
+        
+    </script>
+     
+</body>
+</html>

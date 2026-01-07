@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>p[erimetr of square</h1>
+    <br>
+    <br>
+    <input type="number" id="input" placeholder="">
+    <br>
+    <button onclick="functionOne()">calculate</button>
+    <br>
+    <p id="result"></p>
+    <br>
+</body>
+<script>
+    function functionOne(){
+        //input
+        let a = Number(document.getElementById("input").value);
+        //process
+        let perimeter = 4 * a;
+        //output
+        console.log(perimeter);
+        document.getElementById("result").innerHTML = "the perimeter of square is = " + perimeter;
+
+    }
+</script>
+</html>

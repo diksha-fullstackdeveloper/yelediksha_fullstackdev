@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="input">
+    <br>
+    <br>
+    <button onclick="checkBill()">click</button>
+    <br>
+    <br>
+    <h1 id="display"></h1>
+    <p id="result"></p>
+    <script>
+
+        function checkBill() {
+            let units = Number(document.getElementById("input").value);
+            let output = 0;
+
+            if (units <= 50) {
+                output = units * 7;
+                document.getElementById("display").innerHTML = output;
+            }
+            else if (units <= 150) {
+                output = (50 * 7) + (units - 50) * 8;
+                document.getElementById("display").innerHTML = output;
+            }
+            else if(units <= 250){
+                output = (50 * 7) + (100 * 8) + (units - 150) * 12 ;
+                document.getElementById("display").innerHTML = output;
+            }
+            else {
+                output = (50 * 7) + (100 * 8) + (100 * 12) + (units - 250) * 15;
+                document.getElementById("display").innerHTML = "not define";
+            }
+        }
+
+        //  add 20% surcharge in total bill
+        let surcharge = output * 0.20;
+        let totalbill = output + surcharge;
+        document.getElementById("display").innerHTML = totalbill; 
+
+    </script>
+</body>
+
+</html>
+

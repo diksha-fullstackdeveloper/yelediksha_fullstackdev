@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>rectangle height and length</h1>
+     <br>
+     <input type="number" id="input-one">
+     <br>
+     <input type="number" id="input-two">
+     <br>
+     <button onclick="functionOne()">calculate</button>
+     <br>
+     <p id="result"></p>
+</body>
+<script>
+    function functionOne(){
+        let height = Number(document.getElementById("input-one").value);
+        let length = Number(document.getElementById("input-two").value);
+
+        //process
+        let rectangle = height * length;
+        //output
+        console.log(rectangle);
+        document.getElementById("result").innerHTML = "the height and length of rectangle is=" + rectangle;
+    }
+</script>
+</html>

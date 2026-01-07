@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* declaration */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* tag selectors */
+        .container {
+            height: 60vh;
+            width: 40vw;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input-group {
+            height: 25%;
+            width: 90%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px;
+            gap: 10px;
+        }
+
+        input {
+            height: 30%;
+            width: 90%;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+
+        label {
+            font-size: 24px;
+        }
+
+        button {
+            height: 10%;
+            width: 90%;
+            background-color: rgb(42, 202, 69);
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        .display {
+            height: 15%;
+            width: 90%;
+            background-color:white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 29px;
+
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class one</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Grade Checker</h1>
+        <div class="input-group">
+            <label>Enter the marks:</label>
+            <input type="number" id="input">
+        </div>
+        <div class="display" id="display">
+        </div>
+        <button onclick="showGrade()">check grade</button>
+    </div>
+    <script>
+        function showGrade() {
+
+            let marks = document.getElementById("input").value;
+            display = ""
+
+            if (marks >= 90) {
+                display = "A Grade"
+            }
+            else if (marks >= 75) {
+                display = "B Grade"
+            }
+            else if (marks >= 50) {
+                display = "C Grade"
+            }
+            else if (marks >= 35) {
+                display = "D Grade"
+            }
+            else {
+                display = "Fail"
+            }
+            document.getElementById("display").innerHTML = display;
+        }
+
+    </script>
+
+</body>
+
+</html>

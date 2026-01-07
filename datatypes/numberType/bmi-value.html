@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body>
+    <h1>BMI value</h1>
+    <br>
+    <input type="number" id="weight" placeholder="enter the weight...">
+    <br>
+    <input type="number" id="height" placeholder="enter the height...">
+    <button onclick="clickbutton()">click</button>
+    <p id="display"></p>
+</body>
+<script>
+    function clickbutton(){
+        let userweight = Number(document.getElementById("weight").value);
+         let userheight = Number(document.getElementById("height").value);
+         
+         let heightsquare = userheight * userheight;
+
+         let bmi = userheight / heightsquare;
+        
+         console.log(bmi);
+         document.getElementById("display").innerHTML = "the bmi value is:" + bmi ;
+
+    }
+</script>
+</html>

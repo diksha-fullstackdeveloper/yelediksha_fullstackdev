@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* declaration */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* tag selectors */
+        .input-box-1 {
+            height: 50vh;
+            width: 50vw;
+            background-color: aliceblue;
+            box-shadow: 1px 1px 1px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .input-box-2 {
+            height: 50vh;
+            width: 50vw;
+            background-color: aliceblue;
+            box-shadow: 1px 1px 1px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .input-group {
+            height: 60%;
+            width: 80%;
+            background-color: white;
+            border-radius: 10px;
+            border-style: dotte6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input-1 {
+            height: 30%;
+            width: 90%;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+        .display{
+            height: 10%;
+            width: 70%;
+            background-color:rgb(151, 194, 151);
+            font-size: 24px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ladder if else</title>
+</head>
+
+<body>
+    <!-- structure apply -->
+    <div class="input-box-1" id="box-1">
+        <h1>10th Class</h1>
+
+        <div class="input-group">
+            <input type="text" class="input1" id="input-1">
+            <input type="text" class="input1" id="input-2">
+            <input type="text" class="input1" id="input-3">
+            <input type="text" class="input1" id="input-4">
+            <input type="text" class="input1" id="input-5">
+            <button onclick="checkMarks()">click</button>
+        </div>
+        <div class="display">
+            <h1 id="result"></h1>
+        </div>
+        <script>
+            function checkMarks(){
+
+            if (marks >= 90) {
+                document.getElementById("result").innerHTML = "A"
+            }
+            else if (marks >= 75) {
+                document.getElementById("result").innerHTML = "B"
+            }
+            else if (marks >= 50) {
+                document.getElementById("result").innerHTML = "C"
+            }
+            else if (marks >= 35) {
+                document.getElementById("result").innerHTML = "D"
+            }
+            else {
+                document.getElementById("result").innerHTML = "Fail"
+            }
+            document.getElementById("result").innerHTML = result;
+            }
+        </script>
+
+    </div>
+    <div class="input-box-2" id="box-2">
+        <h1>12th Class</h1>
+        <div class="input-group">
+            <input type="text" class="input1" id="input-1">
+            <input type="text" class="input1" id="input-2">
+            <input type="text" class="input1" id="input-3">
+            <input type="text" class="input1" id="input-4">
+            <input type="text" class="input1" id="input-5">
+        </div>
+
+    </div>
+    <br>
+    <input type="radio" name="class" value="class" id="10th-class"><label>10th class</label>
+    <br>
+    <input type="radio" name="class" value="class" id="12th-class"><label>12th class</label>
+
+    <br>
+    <button onclick="getValue()">submit</button>
+    <!-- apply script -->
+    <script>
+        function getValue() {
+            grade = ""
+            if (document.getElementById("10th-class").checked) {
+                grade = "10 class";
+            }
+            else if (document.getElementById("12th-class").checked) {
+                grade = "12 class";
+            }
+            else {
+                grade = "no option select"
+            }
+            if (grade == "10 class") {
+                document.getElementById("box-1").style.display = "block";
+            }
+            else {
+                document.getElementById("box-2").style.display = "block";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

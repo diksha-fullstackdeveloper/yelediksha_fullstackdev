@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>speed converter</h1>
+    <br>
+    <input type="number" id="speed" placeholder="enter the speed...">
+    <br>
+    <button onclick="functionOne()">calculate</button>
+    <br>
+    <p id="result"></p>
+</body>
+<script>
+    function functionOne(){
+        //input
+        let km = Number(document.getElementById("speed").value);
+
+        //process
+        let ms = km * (5/18);
+
+        //output
+        console.log(ms);
+        document.getElementById("result").innerHTML = "the speed convert km into m is= " + ms;
+    }
+</script>
+</html>

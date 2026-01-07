@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+
+<body>
+    <div id="bulb">
+        <img src="./bulb-off.png" alt="" height="500px" width="500px">
+    </div>
+    <button class="click-button" onclick="bulbon()">On</button>
+    <button class="clicl-button" onclick="bulboff()">Off</button>
+
+</body>
+<script>
+    function bulbon() {
+        let x = "<img src='./bulb-on.png' height='500px' width='500px'>";
+        document.getElementById("bulb").innerHTML = x;
+    }
+    function bulboff() {
+        let y = "<img src='./bulb-off.png' height='500px' width='500px'>";
+        document.getElementById("bulb").innerHTML = y;
+    }
+</script>
+
+</html>
