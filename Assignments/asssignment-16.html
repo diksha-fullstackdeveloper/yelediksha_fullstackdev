@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- style apply -->
+    <style>
+        /* declaration */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        /* tag selectors */
+        .container {
+            height: 90vh;
+            width: 30vw;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .heading-one {
+            font-size: 15px;
+            color: rgb(100, 99, 99);
+        }
+
+        .first-container {
+            height: 50%;
+            width: 80%;
+            background-color: #eaebfd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 15px;
+
+        }
+
+        .circle {
+            height: 25%;
+            width: 16%;
+            background-color: aliceblue;
+            border-radius: 100px;
+            border-style: solid;
+            border-width: 15px;
+            border-color: red;
+        }
+
+        .alert {
+            color: red;
+        }
+
+        .heading-1 {
+            color: rgb(181, 55, 55);
+            font-size: 18px;
+        }
+
+        button {
+            height: 10%;
+            width: 40%;
+            background-color: #4e506b;
+            border-radius: 20px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .second-container{ 
+            height: 25%;
+            width: 80%;
+            background-color: #e6e7f6;
+            display: flex;
+            gap: 10px;
+            border-radius: 15px;
+            
+        }
+        .list{
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="container">
+        <h1><b>Connection Status</b></h1>
+        <p class="heading-one">Toggle between online and offline modes to see the visual changes.</p>
+
+        <!-- first sub container -->
+        <div class="first-container">
+            <div class="circle"></div>
+            <h1 class="alert">Offline</h1>
+            <p class="heading-1">No internet connection</p>
+        </div>
+        <button onclick="switchOnline()">Switch to Online</button>
+        <!-- second sub container -->
+        <div class="second-container">
+            <ul>
+                <li class="list">Current Status Details</li>
+                <li>Limited or no internet access</li>
+                <li>Updates will sync when back online</li>
+                <li>Working in local mode</li>
+            </ul>
+        </div>
+        <P><i>Click the button above to toggle your connection status</i></P>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light ON/OFF Toggle</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body {
+            margin: 0;
+            background-color: #55636e;
+            /* page background (image jaisa) */
+        }
+
+        /* card look */
+        .container {
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        /* buttons look */
+        .b {
+            background-color: #0b1fd1;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* how to use box */
+        .box {
+            background-color: #2e3440;
+            color: white;
+            padding: 15px;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<!-- body container -->
+
+<body>
+    <div class="main-container" id="main">
+        <div class="container" id="container">
+            <h1>Light ON/OFF Toggle</h1>
+            <p>A clean, interactive demonstration of light state switching</p>
+            <img width="60%" height="40%" id="img" />
+            <br />
+            <div class="btn">
+                <button class="b" id="button" onclick="changeTheme()"></button>
+                <button class="b" id="button2"></button>
+            </div><br>
+            <div class="box">
+                <h3>How to use:</h3>
+                <p>Click the button above to toggle the light between ON and OFF states. Observe how the bulb changes
+                    visually and how the page adapts to each state</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // input part 
+        let bgColor = "white";
+        let bgContainer = "white";
+        let textColor = "black";
+        let buttonText = "Trun OFF";
+        let button2 = "Light is currently ON";
+        let bulbOnImage =
+            "https://cliply.co/wp-content/uploads/2019/06/371906590_RESPONSIVE_SMARTPHONE_400.png";
+        let bulbOFFImage =
+            "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSaid_4RYtltEqLboG7VbIlPnRPtU0KobWttQTjqVKW51zVuyVR";
+        let src = bulbOFFImage;
+        // output 
+
+        document.getElementById("main").style.backgroundColor = bgContainer;
+        document.getElementById("container").style.backgroundColor = bgColor;
+        document.getElementById("container").style.color = textColor;
+        document.getElementById("button").innerHTML = buttonText;
+        document.getElementById("img").src = bulbOFFImage;
+        document.getElementById("button2").innerHTML = button2;
+
+        // function
+        function changeTheme() {
+
+            const isOff = bgColor === "white";
+            bgColor = isOff ? "#1f1f1f" : "white";
+            bgContainer = isOff ? "#4f5d66" : "white";
+            textColor = isOff ? "white" : "black";
+
+        
+            buttonText = isOff ? "Turn ON" : "Turn OFF";
+            button2 = isOff
+                ? "Light is currently OFF"
+                : "Light is currently ON";
+
+    
+            src = isOff ? bulbOFFImage : bulbOnImage;
+
+    
+            document.getElementById("img").src = src;
+            document.getElementById("container").style.backgroundColor = bgColor;
+            document.getElementById("container").style.color = textColor;
+            document.getElementById("main").style.backgroundColor = bgContainer;
+
+            document.getElementById("button").innerHTML = buttonText;
+            document.getElementById("button2").innerHTML = button2;
+
+          
+            document.querySelector(".box").style.backgroundColor =
+                isOff ? "#2e3440" : "rgba(137,170,255,0.129)";
+            document.querySelector(".box").style.color =
+                isOff ? "white" : "black";
+        }
+
+
+    </script>
+</body>
+
+</html>
